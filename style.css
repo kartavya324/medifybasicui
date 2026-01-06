@@ -1,0 +1,23 @@
+:root { --primary: #2d5cf7; --text: #333; --bg: #f4f7fe; }
+body { font-family: sans-serif; background: var(--bg); color: var(--text); margin: 0; }
+
+/* Dashboard Layout */
+.dashboard-container { display: grid; grid-template-columns: 1fr 300px; gap: 20px; padding: 20px; height: 90vh; }
+.chatbot-section { background: white; border-radius: 15px; display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.chat-window { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
+.message { padding: 10px 15px; border-radius: 10px; max-width: 80%; }
+.bot { background: #eee; align-self: flex-start; }
+.user { background: var(--primary); color: white; align-self: flex-end; }
+.chat-input-area { padding: 15px; border-top: 1px solid #ddd; display: flex; gap: 10px; }
+input { flex: 1; padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+
+/* Navigation */
+.purpose-nav { display: flex; flex-direction: column; gap: 15px; }
+.nav-card { background: white; padding: 20px; text-decoration: none; color: var(--text); border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+.nav-card:hover { border-left: 5px solid var(--primary); }
+
+/* Sub-page Specifics */
+.sub-page-container { max-width: 600px; margin: 40px auto; padding: 20px; background: white; border-radius: 15px; }
+.stat-card, .file-item, .med-card { border: 1px solid #eee; padding: 15px; margin-bottom: 10px; border-radius: 10px; display: flex; justify-content: space-between; }
+.bar { width: 30px; background: var(--primary); }
+.graph-container { display: flex; align-items: flex-end; gap: 10px; height: 100px; padding-top: 20px; }
