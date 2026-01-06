@@ -1,17 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><title>Medify | Meds</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Medify — Prescriptions</title>
+  <meta name="description" content="Prescriptions list and details." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="sub-page-container">
-        <header><a href="index.html">← Back</a><h1>Current Prescriptions</h1></header>
-        <div class="med-card">
-            <h4>Metformin 500mg</h4>
-            <button class="taken-btn" onclick="markTaken(this)">Mark as Taken</button>
-        </div>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Medify</a>
+      <nav class="main-nav" role="navigation" aria-label="Main">
+        <button id="nav-toggle-presc" class="nav-toggle" aria-expanded="false" aria-controls="nav-list-presc">☰</button>
+        <ul id="nav-list-presc" class="nav-list" hidden>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="prescription.html" aria-current="page">Prescriptions</a></li>
+          <li><a href="tracker.html">Tracker</a></li>
+          <li><a href="files.html">Files</a></li>
+        </ul>
+        <button id="theme-toggle-presc" class="theme-toggle" aria-pressed="false">🌙</button>
+      </nav>
     </div>
-    <script src="script.js"></script>
+  </header>
+
+  <main class="container" role="main">
+    <h1>Prescriptions</h1>
+    <p class="lead">Your current and past medications.</p>
+
+    <section id="prescriptions-list" class="list" aria-live="polite">
+      <!-- JS will render sample prescriptions here -->
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year-presc"></span> Medify</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

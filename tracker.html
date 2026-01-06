@@ -1,22 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><title>Medify | Tracker</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Medify — Tracker</title>
+  <meta name="description" content="Medication adherence tracker and history." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="sub-page-container">
-        <header><a href="index.html">← Back</a><h1>Smart Watch Data</h1></header>
-        <div class="stats-grid">
-            <div class="stat-card">Steps: <strong>4,521</strong></div>
-            <div class="stat-card">Heart Rate: <strong id="hr-val">72</strong> BPM</div>
-        </div>
-        <div class="graph-container">
-            <div class="bar" style="height: 60%;"></div>
-            <div class="bar" style="height: 85%;"></div>
-            <div class="bar" style="height: 70%;"></div>
-        </div>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Medify</a>
+      <nav class="main-nav" role="navigation" aria-label="Main">
+        <button id="nav-toggle-track" class="nav-toggle" aria-expanded="false" aria-controls="nav-list-track">☰</button>
+        <ul id="nav-list-track" class="nav-list" hidden>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="prescription.html">Prescriptions</a></li>
+          <li><a href="tracker.html" aria-current="page">Tracker</a></li>
+          <li><a href="files.html">Files</a></li>
+        </ul>
+        <button id="theme-toggle-track" class="theme-toggle" aria-pressed="false">🌙</button>
+      </nav>
     </div>
-    <script src="script.js"></script>
+  </header>
+
+  <main class="container" role="main">
+    <h1>Tracker</h1>
+    <p class="lead">Track your medication intake and adherence trends.</p>
+
+    <section id="tracker-list" class="list" aria-live="polite">
+      <!-- JS will render sample tracker data here -->
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year-track"></span> Medify</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

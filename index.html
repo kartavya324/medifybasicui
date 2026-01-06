@@ -1,31 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medify | Home</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Medify — Dashboard</title>
+  <meta name="description" content="Medify basic UI — dashboard for prescriptions, trackers and files." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="dashboard-container">
-        <section class="chatbot-section">
-            <div class="chat-header"><h2>Medify AI</h2></div>
-            <div class="chat-window" id="chatWindow">
-                <div class="message bot">Welcome back. How can I help with your health data?</div>
-            </div>
-            <div class="chat-input-area">
-                <input type="text" placeholder="Ask about files, heart rate, or meds...">
-                <button id="sendBtn">Send</button>
-            </div>
-        </section>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Medify home">Medify</a>
 
-        <nav class="purpose-nav">
-            <h3>My Health Dashboard</h3>
-            <a href="files.html" class="nav-card">📁 <strong>Medical Files</strong></a>
-            <a href="tracker.html" class="nav-card">⌚ <strong>Activity Tracker</strong></a>
-            <a href="prescription.html" class="nav-card">💊 <strong>Prescriptions</strong></a>
-        </nav>
+      <nav class="main-nav" role="navigation" aria-label="Main">
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-list">
+          <span class="sr-only">Toggle navigation</span>
+          ☰
+        </button>
+
+        <ul id="nav-list" class="nav-list" hidden>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="prescription.html">Prescriptions</a></li>
+          <li><a href="tracker.html">Tracker</a></li>
+          <li><a href="files.html">Files</a></li>
+        </ul>
+
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false" title="Toggle dark mode">
+          🌙
+        </button>
+      </nav>
     </div>
-    <script src="script.js"></script>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section class="hero">
+      <h1>Welcome to Medify</h1>
+      <p class="lead">A simple, responsive UI to view prescriptions, track medications and manage files.</p>
+    </section>
+
+    <section class="dashboard-cards" aria-label="Quick links">
+      <a class="card" href="prescription.html" aria-label="Open prescriptions">
+        <h2>Prescriptions</h2>
+        <p>View and manage medications</p>
+      </a>
+
+      <a class="card" href="tracker.html" aria-label="Open tracker">
+        <h2>Tracker</h2>
+        <p>Track your medication history and adherence</p>
+      </a>
+
+      <a class="card" href="files.html" aria-label="Open files">
+        <h2>Files</h2>
+        <p>Upload and download health files</p>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© <span id="year"></span> Medify — basic UI prototype</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
